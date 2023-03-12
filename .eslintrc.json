@@ -1,0 +1,40 @@
+{
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "rules": {
+    "no-debugger": "warn",
+    "arrow-body-style": ["error", "as-needed"],
+    "curly": "error",
+    "func-style": "error",
+    "import/prefer-default-export": "off",
+    "linebreak-style": "off",
+    "max-len": ["warn", { "code": 140, "comments": 140 }],
+    "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
+    "operator-linebreak": [
+      "error",
+      "after",
+      {
+        "overrides": {
+          "?": "before",
+          ":": "before",
+          "|": "before",
+          ">": "before",
+          "<": "before"
+        }
+      }
+    ],
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/quotes": "off"
+  }
+}
